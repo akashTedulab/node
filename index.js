@@ -1,6 +1,7 @@
 const express = require('express');
 const reg = require('./auth/reg')
 const app = express();
+const port = 5009;
 // const path = require('path');
 // const home = require('./routes/home');
 // const reqFiter = require('./routes/middleware');
@@ -21,11 +22,6 @@ app.get('/', (req, res)=>{
 
 // app.use('/routes', routes);
 
-// const {MongoClient} = require('mongodb');
-// const url = 'mongodb://localhost:27017';
-// const client = new MongoClient(url);
-// const database = 'e-comm';
-
 // const about = require('./routes/about');
 // route.use(reqFiter);
 // const public = path.join(__dirname, 'public');
@@ -42,23 +38,6 @@ app.get('/', (req, res)=>{
 //     res.sendFile(`${public}/index.html`)
 // });
 
-// app.get("/profile", (req,res)=>{
-    //     const user = {
-        //         name: "Akash Tayde",
-        //         email: "19akasht@test.com",
-        //         city: "badlpaur",
-        //         skills: ['HTML', 'CSS', 'Javscript', 'Node Js', 'Express Js']
-        //     }
-        //     res.render('profile', {user})
-        // });
-        
-        // app.get("/about", (req,res)=>{
-            //     res.sendFile(`${public}/about.html`)
-            // });
-            
-            // app.get('/login', (req,res)=>{
-                //     res.render('login')
-// })
 
 // app.get("/help", (req,res)=>{
     //     res.sendFile(`${public}/help.html`)
@@ -80,26 +59,6 @@ app.get('/', (req, res)=>{
 
 // getData();
 
-
-// app.get('/api', (req, res)=>{
-    //     res.json([{
-        //         "name" : "abcd", 
-        //         "add" : {
-            //             "city" : "abcd",
-            //             "state" : "MH"
-            //         },
-            //         "conatct" : "1234567"
-            //     },
-            //     {
-                //         "name" : "xyz", 
-                //         "add" : {
-                    //             "city" : "abcd",
-                    //             "state" : "MH"
-                    //         },
-                    //         "conatct" : "1234567"
-                    //     },
-                    // ])
-                    // })
-                    
-                    // app.use('/routes', routes)
-                    app.listen(5001);
+app.listen(port, ()=>{
+    console.log(`Your server has started on ${port}`)
+})
